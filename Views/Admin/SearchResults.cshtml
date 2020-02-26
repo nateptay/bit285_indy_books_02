@@ -6,21 +6,16 @@
 
 <h3>Search Result</h3>
 
-
+<!-- TODO: Update to use the new properties from the ERD-->
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
+        <th>Title
         </th>
-        <th>
-            <!-- TODO: Update to use the Name property of the Book's Author entity-->
-            @Html.DisplayNameFor(model => model.Author)
+        <th>Author
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SKU)
+        <th>SKU
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
+        <th>Price
         </th>
     </tr>
 
@@ -31,11 +26,10 @@
                 @book.Title
             </td>
             <td>
-                <!-- TODO: Update to use the Name property of the Book's Author entity-->
-                @book.Author
+
             </td>
             <td class="rightedge">
-                @book.SKU
+         
             </td>
             <td class="rightedge">
                 $@book.Price
