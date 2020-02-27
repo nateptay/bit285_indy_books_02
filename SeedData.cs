@@ -43,9 +43,9 @@ namespace IndyBooks
                         .RuleFor(b => b.Author, f => f.PickRandom(writers));
                     var books = testBooks.Generate(10); // TODO: (3) create a collection of 100 books
 
-                    //TODO : (4) Add the writers collection to the 
+                    //Adds the DbContext Collections to the Database 
                     await context.Books.AddRangeAsync(books);
-
+                    await context.Writers.AddRangeAsync(writers);
                     await context.SaveChangesAsync();
 
             */
