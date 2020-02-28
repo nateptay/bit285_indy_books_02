@@ -10,8 +10,12 @@ namespace IndyBooks.Models
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
+        public string SKU { get; set; }
         [Required]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
+
+        public Writer Author { get; set; }
+
     }
 }
