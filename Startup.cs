@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using IndyBooks.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ namespace IndyBooks
                 options.UseSqlServer(Configuration.GetConnectionString("IndyBooks-Win-SqlServer"));
                 //options.UseSqlite(Configuration.GetConnectionString("IndyBooks-Mac-Sqlite"));
             });
+            services.AddTransient<TotalValueService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

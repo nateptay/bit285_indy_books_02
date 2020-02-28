@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<IndyBooks.Models.Book>
+@inject IndyBooks.Models.TotalValueService tvs
 @{
     ViewBag.Title = "Admin Search";
     Layout = "_Layout";
@@ -9,13 +10,20 @@
 <!-- TODO: Update to use the new properties from the ERD-->
 <table class="table">
     <tr>
-        <th>Title
+        <th>
+            Title
         </th>
-        <th>Author
+        <th>
+            Author
         </th>
-        <th>SKU
+        <th>
+            SKU
         </th>
-        <th>Price
+        <th>
+            Price
+        </th>
+        <th>
+            Total: $@tvs.calculatePageValue(Model)
         </th>
     </tr>
 

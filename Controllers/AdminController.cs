@@ -60,6 +60,7 @@ namespace IndyBooks.Controllers
                              .OrderByDescending(b => b.Price).Take(1);
             }
             //Composite Search Results
+
             return View("SearchResults", foundBooks);
         }
     }
